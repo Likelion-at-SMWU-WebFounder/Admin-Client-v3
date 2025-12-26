@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import * as L from "../../style/LayoutStyle";
 import * as S from "./Board.style";
 import DocsList from "./DocsList";
-import TimePosts from "./TimePosts";
+import BoardWithTime from "./BoardWithTime";
 import Pagination from "./Pagination";
 
 const Board = ({ pass, type, onAdd, onDelete }) => {
@@ -131,7 +131,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
         ></S.StyledSelect>
       </S.Wrapper>
       {type === "type3" && (
-        <TimePosts
+        <BoardWithTime
           list={filteredPosts}
           checkedItems={checkedItems}
           setCheckedItems={setCheckedItems}
