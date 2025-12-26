@@ -50,7 +50,7 @@ const ApplyStatusPage = () => {
         <Navbar />
         <S.VLine></S.VLine>
         <L.Container>
-          <L.Title>지원 현황 및 지원 서류</L.Title>
+          <L.Title>모든 지원 서류 보기</L.Title>
           <L.About>
             신규모집 지원현황을 확인하고, 지원 서류를 관리합니다.
           </L.About>

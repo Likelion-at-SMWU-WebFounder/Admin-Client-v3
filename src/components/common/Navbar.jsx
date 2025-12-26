@@ -20,7 +20,7 @@ const Navbar = () => {
                     isActive ? "active" : undefined
                   }
                 >
-                  지원 현황 및 지원 서류
+                  모든 지원 서류 보기
                 </S.NavStyleLink>
               </S.NavItem>
 
@@ -31,7 +31,29 @@ const Navbar = () => {
                     isActive ? "active" : undefined
                   }
                 >
-                  서류 합격자 선정
+                  서류 합격자 보기
+                </S.NavStyleLink>
+              </S.NavItem>
+
+              <S.NavItem>
+                <S.NavStyleLink
+                  to="/interview"
+                  className={({ isActive }) =>
+                    isActive ? "active" : undefined
+                  }
+                >
+                  지원자별 면접 시간 관리
+                </S.NavStyleLink>
+              </S.NavItem>
+
+              <S.NavItem>
+                <S.NavStyleLink
+                  to="/pass-final"
+                  className={({ isActive }) =>
+                    isActive ? "active" : undefined
+                  }
+                >
+                  최종 합격자 보기
                 </S.NavStyleLink>
               </S.NavItem>
 
@@ -43,28 +65,6 @@ const Navbar = () => {
                   }
                 >
                   서류 문항 관리
-                </S.NavStyleLink>
-              </S.NavItem>
-
-              <S.NavItem>
-                <S.NavStyleLink
-                  to="/interview"
-                  className={({ isActive }) =>
-                    isActive ? "active" : undefined
-                  }
-                >
-                  면접 시간 관리
-                </S.NavStyleLink>
-              </S.NavItem>
-
-              <S.NavItem>
-                <S.NavStyleLink
-                  to="/pass-final"
-                  className={({ isActive }) =>
-                    isActive ? "active" : undefined
-                  }
-                >
-                  최종 합격자 선정
                 </S.NavStyleLink>
               </S.NavItem>
 

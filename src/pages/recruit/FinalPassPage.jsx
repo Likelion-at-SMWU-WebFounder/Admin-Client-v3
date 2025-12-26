@@ -40,8 +40,8 @@ const FinalPassPage = () => {
         <Navbar />
         <VLine></VLine>
         <S.Container>
-          <S.Title>최종 합격자 선정</S.Title>
-          <S.About>최종 합격자를 선정합니다.</S.About>
+          <S.Title>최종 합격자 보기</S.Title>
+          <S.About>최종 합격자를 조회합니다.</S.About>
           <S.SubTitle>최종 합격자 테이블</S.SubTitle>
           <Board pass={docs} type="type2" onDelete={deleteInterview} />
         </S.Container>
