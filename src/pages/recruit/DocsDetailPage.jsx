@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
+import * as S from "./DocsDetailPage.style";
+import * as L from "../../style/LayoutStyle";
 import apiModule from "../../api/apiModule";
 import Form from "../../components/document/Form";
 import Question from "../../components/document/Question";
@@ -23,25 +24,19 @@ const DocsDetailPage = () => {
   }, [joinerId]);
 
   return (
-    <Layout>
-      <Container>
+    <S.Layout>
+      <S.LogoContainer>
+        <img
+          src={`${process.env.PUBLIC_URL}/smwu_lion_logo_white.svg`}
+          alt="Logo"
+        />
+      </S.LogoContainer>
+      <L.Container>
         <Form documentData={documentData} />
         <Question documentData={documentData} />
-      </Container>
-    </Layout>
+      </L.Container>
+    </S.Layout>
   );
 };
 
 export default DocsDetailPage;
-
-const Layout = styled.div`
-  display: flex;
-  background-color: #111111;
-`;
-
-const Container = styled.div`
-  flex-direction: column;
-  align-items: center;
-  padding: 70px;
-  margin-left: 70px;
-`;
