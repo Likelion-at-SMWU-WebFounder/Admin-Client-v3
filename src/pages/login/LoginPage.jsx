@@ -47,9 +47,9 @@ const LoginPage = () => {
   };
 
   return (
-    <S.LoginLayout>
+    <S.LoginLayout color="black">
       <img
-        src={`${process.env.PUBLIC_URL}/Logo.svg`}
+        src={`${process.env.PUBLIC_URL}/smwu_lion_logo_white.svg`}
         alt="Logo"
         className="logo"
       />
