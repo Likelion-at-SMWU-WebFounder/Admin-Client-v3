@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as L from "../../style/LayoutStyle";
 import * as S from "./Board.style";
+import * as B from "../button/Button.style";
 import DocsList from "./DocsList";
 import BoardWithTime from "./BoardWithTime";
 import Pagination from "./Pagination";
@@ -155,37 +156,37 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
         />
       )}
       {type === "type1" && (
-        <L.ButtonContainer>
-          <L.ButtonSet>
-            <S.Button color="#8fe088" onClick={handleFirstAddButtonClick}>
-              <S.ButtonText>합격자 테이블에 추가 +</S.ButtonText>
-            </S.Button>
-            <S.Button color="#e08888" onClick={handleDeleteButtonClick}>
-              <S.ButtonText>삭제</S.ButtonText>
-            </S.Button>
-          </L.ButtonSet>
-        </L.ButtonContainer>
+        <B.ButtonContainer>
+          <B.ButtonSet>
+            <B.Button color="#8fe088" onClick={handleFirstAddButtonClick}>
+              <B.ButtonText>합격자 테이블에 추가 +</B.ButtonText>
+            </B.Button>
+            <B.Button color="#e08888" onClick={handleDeleteButtonClick}>
+              <B.ButtonText>삭제</B.ButtonText>
+            </B.Button>
+          </B.ButtonSet>
+        </B.ButtonContainer>
       )}
       {type === "type2" && (
-        <L.ButtonContainer>
-          <L.ButtonSet>
-            <S.Button color="#e08888" onClick={handleDeleteButtonClick}>
-              <S.ButtonText>삭제</S.ButtonText>
-            </S.Button>
-          </L.ButtonSet>
-        </L.ButtonContainer>
+        <B.ButtonContainer>
+          <B.ButtonSet>
+            <B.Button color="#e08888" onClick={handleDeleteButtonClick}>
+              <B.ButtonText>삭제</B.ButtonText>
+            </B.Button>
+          </B.ButtonSet>
+        </B.ButtonContainer>
       )}
       {type === "type3" && !showPopup && (
-        <L.ButtonContainer>
-          <L.ButtonSet>
-            <S.Button color="#8fe088" onClick={handleAddButtonClick}>
-              <S.ButtonText>최종합격자 테이블에 추가 +</S.ButtonText>
-            </S.Button>
-            <S.Button color="#e08888" onClick={handleDeleteButtonClick}>
-              <S.ButtonText>삭제</S.ButtonText>
-            </S.Button>
-          </L.ButtonSet>
-        </L.ButtonContainer>
+        <B.ButtonContainer>
+          <B.ButtonSet>
+            <B.Button color="#8fe088" onClick={handleAddButtonClick}>
+              <B.ButtonText>최종합격자 테이블에 추가 +</B.ButtonText>
+            </B.Button>
+            <B.Button color="#e08888" onClick={handleDeleteButtonClick}>
+              <B.ButtonText>삭제</B.ButtonText>
+            </B.Button>
+          </B.ButtonSet>
+        </B.ButtonContainer>
       )}
     </S.BoardContainer>
   );

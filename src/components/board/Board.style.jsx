@@ -43,20 +43,3 @@ export const customStyles = {
     backgroundColor: "black",
   }),
 };
-
-export const Button = styled.button`
-  border: none;
-  border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  text-align: center;
-  background: ${({ color }) => color};
-`;
-
-export const ButtonText = styled.span`
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: -1.414px;
-`;

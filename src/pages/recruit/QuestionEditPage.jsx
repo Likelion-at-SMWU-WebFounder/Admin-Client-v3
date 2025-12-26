@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
+import * as B from "../../components/button/Button.style";
 import Navbar from "../../components/common/Navbar";
 import apiModule from "../../api/apiModule";
 
@@ -166,8 +167,8 @@ const QuestionEditPage = () => {
           <Div></Div>
           <Div></Div>
           <Div></Div>
-          <S.ButtonContainer>
-            <S.ButtonSet>
+          <B.ButtonContainer>
+            <B.ButtonSet>
               <SaveButton
                 onClick={() => {
                   editQuestions(questions.flat());
@@ -175,8 +176,8 @@ const QuestionEditPage = () => {
               >
                 저장
               </SaveButton>
-            </S.ButtonSet>
-          </S.ButtonContainer>
+            </B.ButtonSet>
+          </B.ButtonContainer>
         </S.Container>
       </S.Layout>
     </>

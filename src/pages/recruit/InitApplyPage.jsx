@@ -2,27 +2,12 @@ import React from "react";
 import apiModule from "../../api/apiModule";
 import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
+import * as B from "../../components/button/Button.style";
 import Navbar from "../../components/common/Navbar";
 
 const VLine = styled.div`
   border-left: 1px solid white;
   min-height: 100vh;
-`;
-const DeleteButton = styled.button`
-  border: none;
-  margin-right: 20px;
-  border-radius: 15px;
-  background: #ff6e6e;
-  width: 328px;
-  height: 64px;
-  flex-shrink: 0;
-  color: #000;
-  text-align: center;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -1.414px;
 `;
 
 const InitApplyPage = () => {
@@ -51,9 +36,13 @@ const InitApplyPage = () => {
           <S.About>
             지원자 정보를 초기화합니다. 초기화된 정보는 재복구가 어렵습니다.
           </S.About>
-          <DeleteButton onClick={onClickInitButton}>
-            지원자 정보 초기화
-          </DeleteButton>
+          <B.Button
+            color="#ff1d1d"
+            fontColor="white"
+            onClick={onClickInitButton}
+          >
+            <B.ButtonText>지원자 정보 초기화</B.ButtonText>
+          </B.Button>
         </S.Container>
       </S.Layout>
     </>

@@ -54,23 +54,3 @@ export const SubTitle = styled.div`
   letter-spacing: -1.263px;
   margin-bottom: 25px;
 `;
-
-export const ButtonContainer = styled.div`
-  position: relative;
-`;
-
-export const ButtonSet = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 80px;
-  gap: 10px;
-
-  @media (max-width: 500px) {
-    position: absolute;
-    right: 0;
-    bottom: auto;
-  }
-`;
