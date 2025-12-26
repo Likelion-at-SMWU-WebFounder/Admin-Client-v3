@@ -20,11 +20,45 @@ const apiModule = {
     }
   },
 
-  deleteApply: async (joinerIds) => {
-    const url = "/api/manage/apply/docs/delete";
+  // POST 휴지통으로 이동
+  stashApply: async (joinerIds) => {
+    // const url = "/api/manage/apply/docs/delete";
+    const url = "/api/manage/apply/docs/stash";
 
     try {
       const response = await axiosInstance.post(url, { joinerIds });
+      return response.data;
+    } catch (err) {
+      throw new Error(err);
+    }
+  },
+
+  // GET 휴지통 조회
+  fetchStashResult: async () => {
+    const url = "/api/manage/apply/docs/stash";
+    const tracks = ["all", "pm", "fe", "be"];
+
+    try {
+      const responses = await Promise.all(
+        tracks.map((track) =>
+          axiosInstance.get(url, {
+            params: { track: track, page: 0, size: 200 },
+          })
+        )
+      );
+      const data = responses.map((response) => response.data.result);
+      return data;
+    } catch (err) {
+      throw new Error(err);
+    }
+  },
+
+  // PUT 휴지통에서 복구
+  restoreDocs: async (joinerIds) => {
+    const url = "/api/manage/apply/docs/stash";
+
+    try {
+      const response = await axiosInstance.put(url, { joinerIds });
       return response.data;
     } catch (err) {
       throw new Error(err);

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import apiModule from "../../api/apiModule";
 import * as S from "./Question.style";
-import * as L from "../../style/LayoutStyle";
 
 const Question = ({ documentData }) => {
   const [questions, setQuestions] = useState([]);

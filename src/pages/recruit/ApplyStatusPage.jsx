@@ -35,9 +35,9 @@ const ApplyStatusPage = () => {
     }
   };
 
-  const handleDeleteApply = async (checkedItems) => {
+  const handleStashApply = async (checkedItems) => {
     try {
-      await apiModule.deleteApply(checkedItems);
+      await apiModule.stashApply(checkedItems);
       await fetchDocsResult();
     } catch (error) {
       console.error("error:", error);
@@ -85,7 +85,7 @@ const ApplyStatusPage = () => {
             pass={sortedPreviewLists}
             type="type1"
             onAdd={handleAddToDocs}
-            onDelete={handleDeleteApply}
+            onDelete={handleStashApply}
           />
         </L.Container>
       </L.Layout>
