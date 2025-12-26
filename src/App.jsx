@@ -1,20 +1,22 @@
 import React from "react";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-import HomePage from "./pages/home/HomePage";
-import LoginPage from "./pages/login/LoginPage";
-import ApplicationStatusPage from "./pages/recruit/ApplicationStatusPage";
-import PassedApplicantsPage from "./pages/recruit/PassedApplicantsPage";
-import DocumentItemsPage from "./pages/recruit/DocumentItemsPage";
 import { ThemeProvider } from "styled-components";
 import theme from "./style/theme";
 import GlobalStyle from "./style/GlobalStyle";
-import DocumentItemsEditPage from "./pages/recruit/DocumentItemsEditPage";
-import DocumentDetailPage from "./pages/recruit/DocumentDetailPage";
-import InterviewTimePage from "./pages/recruit/InterviewTimePage";
-import PassFinalPage from "./pages/recruit/PassFinalPage";
-import InitApplicantPage from "./pages/recruit/InitApplicantPage";
+
 import PrivateRoute from "./components/PrivateRoute";
+
+import HomePage from "./pages/home/HomePage";
+import LoginPage from "./pages/login/LoginPage";
+import QuestionPage from "./pages/recruit/QuestionPage";
+import QuestionEditPage from "./pages/recruit/QuestionEditPage";
+import ApplyStatusPage from "./pages/recruit/ApplyStatusPage";
+import DocsDetailPage from "./pages/recruit/DocsDetailPage";
+import InitApplyPage from "./pages/recruit/InitApplyPage";
+import DocsPassPage from "./pages/recruit/DocsPassPage";
+import FinalPassPage from "./pages/recruit/FinalPassPage";
+import InterviewTimePage from "./pages/recruit/InterviewTimePage";
 
 function App() {
   return (
@@ -35,7 +37,7 @@ function App() {
             path="/apply"
             element={
               <PrivateRoute>
-                <ApplicationStatusPage />
+                <ApplyStatusPage />
               </PrivateRoute>
             }
           />
@@ -43,7 +45,7 @@ function App() {
             path="/pass"
             element={
               <PrivateRoute>
-                <PassedApplicantsPage />
+                <DocsPassPage />
               </PrivateRoute>
             }
           />
@@ -51,7 +53,7 @@ function App() {
             path="/document"
             element={
               <PrivateRoute>
-                <DocumentItemsPage />
+                <QuestionPage />
               </PrivateRoute>
             }
           />
@@ -59,7 +61,7 @@ function App() {
             path="/editdocument"
             element={
               <PrivateRoute>
-                <DocumentItemsEditPage />
+                <QuestionEditPage />
               </PrivateRoute>
             }
           />
@@ -67,7 +69,7 @@ function App() {
             path="/apply/:joinerId"
             element={
               <PrivateRoute>
-                <DocumentDetailPage />
+                <DocsDetailPage />
               </PrivateRoute>
             }
           />
@@ -83,7 +85,7 @@ function App() {
             path="/pass-final"
             element={
               <PrivateRoute>
-                <PassFinalPage />
+                <FinalPassPage />
               </PrivateRoute>
             }
           />
@@ -91,7 +93,7 @@ function App() {
             path="/init-applicant"
             element={
               <PrivateRoute>
-                <InitApplicantPage />
+                <InitApplyPage />
               </PrivateRoute>
             }
           />

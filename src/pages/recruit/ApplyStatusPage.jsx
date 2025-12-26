@@ -52,7 +52,7 @@ const VLine = styled.div`
   min-height: 100vh;
 `;
 
-const ApplicationStatusPage = () => {
+const ApplyStatusPage = () => {
   const [docs, setDocs] = useState([]);
 
   const fetchDocsResult = async () => {
@@ -141,4 +141,4 @@ const ApplicationStatusPage = () => {
   );
 };
 
-export default ApplicationStatusPage;
+export default ApplyStatusPage;

@@ -11,30 +11,31 @@ const VLine = styled.div`
   min-height: 100vh;
 `;
 
-const PassFinalPage = () => {
+const DocsPassPage = () => {
   const [docs, setDocs] = useState([]);
 
-  const fetchDocsResult = async () => {
+  const fetchData = async () => {
     try {
-      const data = await apiModule.fetchInterviewResults();
+      const data = await apiModule.fetchDocsResult();
       setDocs(data);
-    } catch (err) {
-      console.error("err", err);
+    } catch (error) {
+      console.error("error:", error);
     }
   };
 
   useEffect(() => {
-    fetchDocsResult();
+    fetchData();
   }, []);
 
-  const deleteInterview = async (checkedItems) => {
+  const deleteDocsResult = async (checkedItems) => {
     try {
-      await apiModule.deleteInterview(checkedItems);
-      await fetchDocsResult();
-    } catch (err) {
-      console.error("err", err);
+      await apiModule.deleteDocsResult(checkedItems);
+      await fetchData();
+    } catch (error) {
+      console.error("error:", error);
     }
   };
+
   return (
     <>
       <Logo />
@@ -42,14 +43,14 @@ const PassFinalPage = () => {
         <Navbar />
         <VLine></VLine>
         <S.Container>
-          <S.Title>최종 합격자 선정</S.Title>
-          <S.About>최종 합격자를 선정합니다.</S.About>
-          <S.SubTitle>최종 합격자 테이블</S.SubTitle>
-          <Board pass={docs} type="type2" onDelete={deleteInterview} />
+          <S.Title>서류 합격자 선정</S.Title>
+          <S.About>합격서류를 분류하여 별도로 관리합니다.</S.About>
+          <S.SubTitle>서류 합격자 테이블</S.SubTitle>
+          <Board pass={docs} type="type2" onDelete={deleteDocsResult} />
         </S.Container>
       </S.Layout>
     </>
   );
 };
 
-export default PassFinalPage;
+export default DocsPassPage;

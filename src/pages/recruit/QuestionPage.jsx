@@ -118,7 +118,7 @@ const VLine = styled.div`
   min-height: 100vh;
 `;
 
-const DocumentItemsPage = () => {
+const QuestionPage = () => {
   const navigate = useNavigate();
   const [questions, setQuestions] = useState([]);
   const [inputContents, setInputContents] = useState({
@@ -160,7 +160,7 @@ const DocumentItemsPage = () => {
   const handleSubmit = async (track, idx) => {
     try {
       await apiModule.postQuestions({
-        year: 2025, // 매년 바꿔줘야함
+        year: 2026, // 매년 바꿔줘야함
         track: track,
         number: questions[idx].length + 1,
         content: inputContents[track],
@@ -306,4 +306,4 @@ const DocumentItemsPage = () => {
   );
 };
 
-export default DocumentItemsPage;
+export default QuestionPage;

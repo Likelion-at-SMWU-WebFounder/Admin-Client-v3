@@ -26,7 +26,7 @@ const DeleteButton = styled.button`
   letter-spacing: -1.414px;
 `;
 
-const InitApplicantPage = () => {
+const InitApplyPage = () => {
   const onClickInitButton = async () => {
     if (
       window.confirm(
@@ -62,4 +62,4 @@ const InitApplicantPage = () => {
   );
 };
 
-export default InitApplicantPage;
+export default InitApplyPage;

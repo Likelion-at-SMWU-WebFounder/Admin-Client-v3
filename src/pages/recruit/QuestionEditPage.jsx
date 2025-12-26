@@ -56,7 +56,7 @@ const VLine = styled.div`
   min-height: 100vh;
 `;
 
-const DocumentItemsEditPage = () => {
+const QuestionEditPage = () => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -185,4 +185,4 @@ const DocumentItemsEditPage = () => {
   );
 };
 
-export default DocumentItemsEditPage;
+export default QuestionEditPage;

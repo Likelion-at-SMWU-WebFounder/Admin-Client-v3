@@ -5,7 +5,7 @@ import apiModule from "../../api/apiModule";
 import Form from "../../components/document/Form";
 import Question from "../../components/document/Question";
 
-const DocumentDetailPage = () => {
+const DocsDetailPage = () => {
   const { joinerId } = useParams();
   const [documentData, setDocumentData] = useState(null);
 
@@ -32,7 +32,7 @@ const DocumentDetailPage = () => {
   );
 };
 
-export default DocumentDetailPage;
+export default DocsDetailPage;
 
 const Layout = styled.div`
   display: flex;
