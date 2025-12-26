@@ -1,55 +1,9 @@
 import React, { useState, useEffect } from "react";
 import apiModule from "../../api/apiModule";
-import styled from "styled-components";
-import * as S from "../../style/LayoutStyle";
+import * as L from "../../style/LayoutStyle";
+import * as S from "./ApplyStatusPage.style";
 import Navbar from "../../components/common/Navbar";
 import Board from "../../components/board/Board";
-
-const StateContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 70px;
-`;
-
-const StateBox = styled.div`
-  position: relative;
-  width: 239px;
-  height: 153px;
-  flex-shrink: 0;
-  border-radius: 15px;
-  background: rgba(217, 217, 217, 0.6);
-  margin-right: 1.5vw;
-`;
-
-const StateItem = styled.div`
-  position: absolute;
-  left: 15px;
-  top: 17px;
-  color: #111;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -1.263px;
-`;
-
-const StateNum = styled.div`
-  position: absolute;
-  right: 15px;
-  bottom: 17px;
-  color: #111;
-  text-align: right;
-  font-size: 45px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -2.273px;
-`;
-
-const VLine = styled.div`
-  border-left: 1px solid white;
-  min-height: 100vh;
-`;
 
 const ApplyStatusPage = () => {
   const [docs, setDocs] = useState([]);
@@ -92,49 +46,49 @@ const ApplyStatusPage = () => {
 
   return (
     <>
-      <S.Layout>
+      <L.Layout>
         <Navbar />
-        <VLine></VLine>
-        <S.Container>
-          <S.Title>지원 현황 및 지원 서류</S.Title>
-          <S.About>
+        <S.VLine></S.VLine>
+        <L.Container>
+          <L.Title>지원 현황 및 지원 서류</L.Title>
+          <L.About>
             신규모집 지원현황을 확인하고, 지원 서류를 관리합니다.
-          </S.About>
-          <S.SubTitle>지원 현황</S.SubTitle>
-          <StateContainer>
-            <StateBox>
-              <StateItem>전체 지원자 수</StateItem>
+          </L.About>
+          <L.SubTitle>지원 현황</L.SubTitle>
+          <S.StateContainer>
+            <S.StateBox>
+              <S.StateItem>전체 지원자</S.StateItem>
               {applicationStatus.length > 0 && (
-                <StateNum>{applicationStatus[0].allApplicants}명</StateNum>
+                <S.StateNum>{applicationStatus[0].allApplicants}명</S.StateNum>
               )}
-            </StateBox>
-            <StateBox>
-              <StateItem>기획·디자인 지원자 수</StateItem>
+            </S.StateBox>
+            <S.StateBox>
+              <S.StateItem>기획·디자인</S.StateItem>
               {applicationStatus.length > 0 && (
-                <StateNum>{applicationStatus[0].pmApplicants}명</StateNum>
+                <S.StateNum>{applicationStatus[0].pmApplicants}명</S.StateNum>
               )}
-            </StateBox>
-            <StateBox>
-              <StateItem>프론트엔드 지원자 수</StateItem>
+            </S.StateBox>
+            <S.StateBox>
+              <S.StateItem>프론트엔드</S.StateItem>
               {applicationStatus.length > 0 && (
-                <StateNum>{applicationStatus[0].feApplicants}명</StateNum>
+                <S.StateNum>{applicationStatus[0].feApplicants}명</S.StateNum>
               )}
-            </StateBox>
-            <StateBox>
-              <StateItem>백엔드 지원자 수</StateItem>
+            </S.StateBox>
+            <S.StateBox>
+              <S.StateItem>백엔드</S.StateItem>
               {applicationStatus.length > 0 && (
-                <StateNum>{applicationStatus[0].beApplicants}명</StateNum>
+                <S.StateNum>{applicationStatus[0].beApplicants}명</S.StateNum>
               )}
-            </StateBox>
-          </StateContainer>
+            </S.StateBox>
+          </S.StateContainer>
           <Board
             pass={sortedPreviewLists}
             type="type1"
             onAdd={handleAddToDocs}
             onDelete={handleDeleteApply}
           />
-        </S.Container>
-      </S.Layout>
+        </L.Container>
+      </L.Layout>
     </>
   );
 };

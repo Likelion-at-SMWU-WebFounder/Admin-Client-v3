@@ -1,87 +1,9 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import * as S from "../../style/LayoutStyle";
-import Posts from "./Posts";
+import * as L from "../../style/LayoutStyle";
+import * as S from "./Board.style";
+import DocsList from "./DocsList";
 import TimePosts from "./TimePosts";
 import Pagination from "./Pagination";
-import Select from "react-select";
-
-const BoardContainer = styled.div``;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const StyledSelect = styled(Select)`
-  width: 150px;
-`;
-
-const customStyles = {
-  control: (provided) => ({
-    ...provided,
-    outline: "none",
-    backgroundColor: "black",
-    borderColor: "white",
-    borderRadius: "10px",
-    boxShadow: "none",
-    "&:hover": {
-      borderColor: "white",
-    },
-  }),
-
-  option: (provided, state) => ({
-    ...provided,
-    outline: "none",
-    fontWeight: state.isSelected ? "bold" : "normal",
-    color: "black",
-    backgroundColor: "white",
-    fontSize: state.selectProps.myFontSize,
-    "&:hover": {
-      backgroundColor: "#d2d2d2",
-    },
-  }),
-  singleValue: (provided, state) => ({
-    ...provided,
-    color: "white",
-    backgroundColor: "black",
-  }),
-};
-
-const AddButton = styled.button`
-  border: none;
-  margin-right: 20px;
-  border-radius: 5px;
-  background: #8fe088;
-  width: 351px;
-  height: 56px;
-  flex-shrink: 0;
-  color: #000;
-  text-align: center;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -1.414px;
-`;
-
-const DeleteButton = styled.button`
-  border: none;
-  margin-right: 20px;
-  border-radius: 5px;
-  background: #e08888;
-  width: 102px;
-  height: 56px;
-  flex-shrink: 0;
-  color: #000;
-  text-align: center;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -1.414px;
-`;
 
 const Board = ({ pass, type, onAdd, onDelete }) => {
   const [page, setPage] = useState(1);
@@ -197,17 +119,17 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
   };
 
   return (
-    <BoardContainer>
-      <Wrapper>
-        <S.SubTitle>지원 서류</S.SubTitle>
-        <StyledSelect
+    <S.BoardContainer>
+      <S.Wrapper>
+        <L.SubTitle>지원 서류</L.SubTitle>
+        <S.StyledSelect
           options={tracks}
           onChange={handleSelectTrackChange}
           defaultValue={tracks[0]}
-          styles={customStyles}
+          styles={S.customStyles}
           isSearchable={false}
-        ></StyledSelect>
-      </Wrapper>
+        ></S.StyledSelect>
+      </S.Wrapper>
       {type === "type3" && (
         <TimePosts
           list={filteredPosts}
@@ -218,7 +140,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
         />
       )}
       {(type === "type1" || type === "type2") && (
-        <Posts
+        <DocsList
           list={filteredPosts}
           checkedItems={checkedItems}
           setCheckedItems={setCheckedItems}
@@ -233,33 +155,39 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
         />
       )}
       {type === "type1" && (
-        <S.ButtonContainer>
-          <S.ButtonSet>
-            <DeleteButton onClick={handleDeleteButtonClick}>삭제</DeleteButton>
-            <AddButton onClick={handleFirstAddButtonClick}>
-              합격자 테이블에 추가 +
-            </AddButton>
-          </S.ButtonSet>
-        </S.ButtonContainer>
+        <L.ButtonContainer>
+          <L.ButtonSet>
+            <S.Button color="#8fe088" onClick={handleFirstAddButtonClick}>
+              <S.ButtonText>합격자 테이블에 추가 +</S.ButtonText>
+            </S.Button>
+            <S.Button color="#e08888" onClick={handleDeleteButtonClick}>
+              <S.ButtonText>삭제</S.ButtonText>
+            </S.Button>
+          </L.ButtonSet>
+        </L.ButtonContainer>
       )}
       {type === "type2" && (
-        <S.ButtonContainer>
-          <S.ButtonSet>
-            <DeleteButton onClick={handleDeleteButtonClick}>삭제</DeleteButton>
-          </S.ButtonSet>
-        </S.ButtonContainer>
+        <L.ButtonContainer>
+          <L.ButtonSet>
+            <S.Button color="#e08888" onClick={handleDeleteButtonClick}>
+              <S.ButtonText>삭제</S.ButtonText>
+            </S.Button>
+          </L.ButtonSet>
+        </L.ButtonContainer>
       )}
       {type === "type3" && !showPopup && (
-        <S.ButtonContainer>
-          <S.ButtonSet>
-            <AddButton onClick={handleAddButtonClick}>
-              최종합격자 테이블에 추가 +
-            </AddButton>
-            <DeleteButton onClick={handleDeleteButtonClick}>삭제</DeleteButton>
-          </S.ButtonSet>
-        </S.ButtonContainer>
+        <L.ButtonContainer>
+          <L.ButtonSet>
+            <S.Button color="#8fe088" onClick={handleAddButtonClick}>
+              <S.ButtonText>최종합격자 테이블에 추가 +</S.ButtonText>
+            </S.Button>
+            <S.Button color="#e08888" onClick={handleDeleteButtonClick}>
+              <S.ButtonText>삭제</S.ButtonText>
+            </S.Button>
+          </L.ButtonSet>
+        </L.ButtonContainer>
       )}
-    </BoardContainer>
+    </S.BoardContainer>
   );
 };
 
