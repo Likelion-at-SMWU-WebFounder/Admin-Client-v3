@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import Navbar from "../../components/common/Navbar";
-import Logo from "../../components/common/Logo";
 import apiModule from "../../api/apiModule";
 
 const QuestionContainer = styled.div``;
@@ -98,7 +97,6 @@ const QuestionEditPage = () => {
 
   return (
     <>
-      <Logo />
       <S.Layout>
         <Navbar />
         <VLine></VLine>

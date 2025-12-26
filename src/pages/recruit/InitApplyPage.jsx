@@ -3,7 +3,6 @@ import apiModule from "../../api/apiModule";
 import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import Navbar from "../../components/common/Navbar";
-import Logo from "../../components/common/Logo";
 
 const VLine = styled.div`
   border-left: 1px solid white;
@@ -44,7 +43,6 @@ const InitApplyPage = () => {
 
   return (
     <>
-      <Logo />
       <S.Layout>
         <Navbar />
         <VLine></VLine>

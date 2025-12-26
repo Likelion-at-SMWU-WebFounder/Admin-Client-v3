@@ -3,7 +3,6 @@ import apiModule from "../../api/apiModule";
 import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import Navbar from "../../components/common/Navbar";
-import Logo from "../../components/common/Logo";
 import Board from "../../components/board/Board";
 
 const VLine = styled.div`
@@ -45,7 +44,6 @@ const InterviewTimePage = () => {
 
   return (
     <>
-      <Logo />
       <S.Layout>
         <Navbar />
         <VLine></VLine>
