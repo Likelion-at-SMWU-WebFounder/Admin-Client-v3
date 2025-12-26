@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import * as S from "./DocsList.style";
+import * as S from "./style/DocsList.style";
 
 const DocsList = ({ list, checkedItems, setCheckedItems }) => {
   const [isAllChecked, setIsAllChecked] = useState(false);

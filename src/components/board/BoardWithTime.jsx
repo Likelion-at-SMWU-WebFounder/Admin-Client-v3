@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TimePopup from "../interview/TimePopup";
-import * as S from "./DocsList.style";
+import * as S from "./style/DocsList.style";
 import * as B from "../button/Button.style";
 
 const BoardWithTime = ({

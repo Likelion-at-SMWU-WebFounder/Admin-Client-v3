@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from "react";
 import apiModule from "../../api/apiModule";
-import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import Navbar from "../../components/common/Navbar";
 import Board from "../../components/board/Board";
-
-const VLine = styled.div`
-  border-left: 1px solid white;
-  min-height: 100vh;
-`;
 
 const DocsPassPage = () => {
   const [docs, setDocs] = useState([]);
@@ -39,7 +33,6 @@ const DocsPassPage = () => {
     <>
       <S.Layout>
         <Navbar />
-        <VLine></VLine>
         <S.Container>
           <S.Title>서류 합격자 보기</S.Title>
           <S.About>서류 합격 서류를 분류하여 별도로 관리합니다.</S.About>

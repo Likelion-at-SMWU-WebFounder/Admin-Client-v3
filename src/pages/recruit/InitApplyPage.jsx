@@ -1,14 +1,8 @@
 import React from "react";
 import apiModule from "../../api/apiModule";
-import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import * as B from "../../components/button/Button.style";
 import Navbar from "../../components/common/Navbar";
-
-const VLine = styled.div`
-  border-left: 1px solid white;
-  min-height: 100vh;
-`;
 
 const InitApplyPage = () => {
   const onClickInitButton = async () => {
@@ -30,7 +24,6 @@ const InitApplyPage = () => {
     <>
       <S.Layout>
         <Navbar />
-        <VLine></VLine>
         <S.Container>
           <S.Title>지원자 정보 초기화</S.Title>
           <S.About>

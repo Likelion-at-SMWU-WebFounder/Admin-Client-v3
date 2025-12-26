@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import apiModule from "../../api/apiModule";
 import * as L from "../../style/LayoutStyle";
-import * as S from "./ApplyStatusPage.style";
+import * as S from "./style/ApplyStatusPage.style";
 import Navbar from "../../components/common/Navbar";
 import Board from "../../components/board/Board";
 
