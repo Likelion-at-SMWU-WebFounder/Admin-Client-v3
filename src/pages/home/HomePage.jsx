@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import Navbar from "../../components/common/Navbar";
-import Logo from "../../components/common/Logo";
 
 const VLine = styled.div`
   border-left: 1px solid white;
@@ -12,7 +11,6 @@ const VLine = styled.div`
 const HomePage = () => {
   return (
     <>
-      <Logo />
       <S.Layout>
         <Navbar />
         <VLine></VLine>

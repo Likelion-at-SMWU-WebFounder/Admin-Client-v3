@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import apiModule from "../../api/apiModule";
-import styled from "styled-components";
+import * as S from "./Question.style";
+import * as L from "../../style/LayoutStyle";
 
 const Question = ({ documentData }) => {
   const [questions, setQuestions] = useState([]);
@@ -48,24 +49,24 @@ const Question = ({ documentData }) => {
     <>
       <>
         {questions[0]?.map((question, index) => (
-          <QuestionContainer key={index}>
-            <Text fontSize="18px" marginTop="30px" marginLeft="30px">
+          <S.QuestionContainer key={index}>
+            <S.Text fontSize="18px">
               {`${index + 1}: `}
               &nbsp;
               {question.content}
-              <QuestionLength>
+              <S.QuestionLength>
                 {documentData && documentData.answerList
                   ? documentData.answerList[index].length
                   : ""}
                 자
-              </QuestionLength>
-            </Text>
-            <Textarea>
+              </S.QuestionLength>
+            </S.Text>
+            <S.Textarea>
               {documentData && documentData.answerList
                 ? documentData.answerList[index]
                 : ""}
-            </Textarea>
-          </QuestionContainer>
+            </S.Textarea>
+          </S.QuestionContainer>
         ))}
 
         {/* <Hr marginTop="30px" />
@@ -86,55 +87,20 @@ const Question = ({ documentData }) => {
         */}
       </>
 
-      <QuestionContainer>
-        <Text fontSize="18px" marginTop="30px" marginLeft="30px">
+      <S.QuestionContainer>
+        <S.Text fontSize="18px" marginTop="15px">
           면접 가능 시간
-        </Text>
+        </S.Text>
         {documentData &&
           documentData.interviewTime &&
           documentData.interviewTime.map((item, i) => (
-            <Text key={i} fontSize="15px" marginTop="30px" marginLeft="30px">
-              {item}
-            </Text>
+            <S.Text key={i} fontSize="14px" marginTop="5px">
+              - {item}
+            </S.Text>
           ))}
-      </QuestionContainer>
+      </S.QuestionContainer>
     </>
   );
 };
 
 export default Question;
-
-const Text = styled.div`
-  width: 1000px;
-  font-size: ${(props) => props.fontSize};
-  font-weight: 700;
-  line-height: 25px;
-  margin-top: ${(props) => props.marginTop};
-  margin-bottom: ${(props) => props.marginBottom};
-  margin-left: ${(props) => props.marginLeft};
-  margin-right: ${(props) => props.marginRight};
-`;
-
-const QuestionContainer = styled.div`
-  margin-bottom: 20px;
-`;
-
-const Textarea = styled.div`
-  margin: 30px;
-  font-size: 14px;
-  padding: 10px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  border-radius: 10px;
-  width: 1000px;
-  min-height: 100px;
-  height: fit-content;
-  resize: vertical;
-  background: #111111;
-  line-height: 1.5rem;
-`;
-
-const QuestionLength = styled.div`
-  margin-top: 10px;
-  color: #eb9537;
-`;

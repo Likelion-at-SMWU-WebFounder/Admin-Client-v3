@@ -3,7 +3,6 @@ import apiModule from "../../api/apiModule";
 import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import Navbar from "../../components/common/Navbar";
-import Logo from "../../components/common/Logo";
 import Board from "../../components/board/Board";
 
 const VLine = styled.div`
@@ -11,7 +10,7 @@ const VLine = styled.div`
   min-height: 100vh;
 `;
 
-const PassedApplicantsPage = () => {
+const DocsPassPage = () => {
   const [docs, setDocs] = useState([]);
 
   const fetchData = async () => {
@@ -38,13 +37,12 @@ const PassedApplicantsPage = () => {
 
   return (
     <>
-      <Logo />
       <S.Layout>
         <Navbar />
         <VLine></VLine>
         <S.Container>
-          <S.Title>서류 합격자 선정</S.Title>
-          <S.About>합격서류를 분류하여 별도로 관리합니다.</S.About>
+          <S.Title>서류 합격자 보기</S.Title>
+          <S.About>서류 합격 서류를 분류하여 별도로 관리합니다.</S.About>
           <S.SubTitle>서류 합격자 테이블</S.SubTitle>
           <Board pass={docs} type="type2" onDelete={deleteDocsResult} />
         </S.Container>
@@ -53,4 +51,4 @@ const PassedApplicantsPage = () => {
   );
 };
 
-export default PassedApplicantsPage;
+export default DocsPassPage;

@@ -5,14 +5,13 @@ const ButtonWrap = styled.div`
   margin: 60px auto;
 `;
 const Button = styled.button`
-  color: white;
-  margin: 5px;
-  padding: 8px;
+  margin: 3px;
+  padding: 3px;
   border: none;
   background: none;
   cursor: pointer;
   opacity: 0.8;
-  font-size: 25px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -20,7 +19,6 @@ const Button = styled.button`
 
   &.activeButton {
     border: none;
-    color: #fff;
     font-weight: 900;
     opacity: 1;
   }

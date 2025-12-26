@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Layout = styled.div`
   display: flex;
-  padding-bottom: 10vh;
+  min-height: 100vh;
 `;
 
 export const RowDiv = styled.div`
@@ -22,13 +22,16 @@ export const HomeContainer = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 4vw;
-  margin-right: 4vw;
+  margin-left: 30px;
+  margin-right: 30px;
   width: 100vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 100%;
 `;
 
 export const Title = styled.div`
-  font-size: 35px;
+  font-size: 27px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -36,38 +39,19 @@ export const Title = styled.div`
 `;
 
 export const About = styled.div`
-  font-size: 21px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -1.061px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 `;
 
 export const SubTitle = styled.div`
-  font-size: 25px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -1.263px;
   margin-bottom: 25px;
-`;
-
-export const ButtonContainer = styled.div`
-  position: relative;
-`;
-
-export const ButtonSet = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 80px;
-
-  @media (max-width: 500px) {
-    position: absolute;
-    right: 0;
-    bottom: auto;
-  }
 `;
