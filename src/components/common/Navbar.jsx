@@ -78,6 +78,16 @@ const Navbar = () => {
                   지원자 정보 초기화
                 </S.NavStyleLink>
               </S.NavItem>
+              <S.NavItem>
+                <S.NavStyleLink
+                  to="/stash"
+                  className={({ isActive }) =>
+                    isActive ? "active" : undefined
+                  }
+                >
+                  휴지통
+                </S.NavStyleLink>
+              </S.NavItem>
             </S.NavList>
           </S.NavBox>
         </S.NavContainer>

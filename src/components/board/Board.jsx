@@ -119,6 +119,18 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
     }
   };
 
+  const handleRestoreButtonClick = () => {
+    if (checkedItems.length === 0) {
+      alert("선택된 지원자가 없습니다.");
+    } else {
+      if (window.confirm("선택한 지원자를 복구하시겠습니까?")) {
+        onDelete(checkedItems);
+        setCheckedItems([]);
+        alert("선택한 지원자가 복구되었습니다.");
+      }
+    }
+  };
+
   return (
     <S.BoardContainer>
       <S.Wrapper>
@@ -140,7 +152,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
           setShowPopup={setShowPopup}
         />
       )}
-      {(type === "type1" || type === "type2") && (
+      {(type === "type1" || type === "type2" || type === "type4") && (
         <DocsList
           list={filteredPosts}
           checkedItems={checkedItems}
@@ -184,6 +196,15 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
             </B.Button>
             <B.Button color="#e08888" onClick={handleDeleteButtonClick}>
               <B.ButtonText>삭제</B.ButtonText>
+            </B.Button>
+          </B.ButtonSet>
+        </B.ButtonContainer>
+      )}
+      {type === "type4" && (
+        <B.ButtonContainer>
+          <B.ButtonSet>
+            <B.Button color="#e08888" onClick={handleRestoreButtonClick}>
+              복구
             </B.Button>
           </B.ButtonSet>
         </B.ButtonContainer>

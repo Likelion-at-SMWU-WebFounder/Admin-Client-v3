@@ -17,6 +17,7 @@ import InitApplyPage from "./pages/recruit/InitApplyPage";
 import DocsPassPage from "./pages/recruit/DocsPassPage";
 import FinalPassPage from "./pages/recruit/FinalPassPage";
 import InterviewTimePage from "./pages/recruit/InterviewTimePage";
+import StashItemsPage from "./pages/recruit/StashItemsPage";
 
 function App() {
   return (
@@ -94,6 +95,14 @@ function App() {
             element={
               <PrivateRoute>
                 <InitApplyPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/stash"
+            element={
+              <PrivateRoute>
+                <StashItemsPage />
               </PrivateRoute>
             }
           />

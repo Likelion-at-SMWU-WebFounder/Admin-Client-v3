@@ -1,28 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import * as L from "../../style/LayoutStyle";
 import * as B from "../../components/button/Button.style";
 import * as S from "./QuestionPage.style";
 import Navbar from "../../components/common/Navbar";
 import apiModule from "../../api/apiModule";
-
-const SaveButton = styled.button`
-  border: none;
-  margin-right: 20px;
-  border-radius: 5px;
-  background: #5c67ce;
-  width: 102px;
-  height: 56px;
-  flex-shrink: 0;
-  color: #000;
-  text-align: center;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -1.414px;
-`;
 
 const QuestionEditPage = () => {
   const [questions, setQuestions] = useState([]);
