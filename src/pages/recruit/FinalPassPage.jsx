@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from "react";
 import apiModule from "../../api/apiModule";
-import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import Navbar from "../../components/common/Navbar";
 import Board from "../../components/board/Board";
-
-const VLine = styled.div`
-  border-left: 1px solid white;
-  min-height: 100vh;
-`;
 
 const FinalPassPage = () => {
   const [docs, setDocs] = useState([]);
@@ -38,7 +32,6 @@ const FinalPassPage = () => {
     <>
       <S.Layout>
         <Navbar />
-        <VLine></VLine>
         <S.Container>
           <S.Title>최종 합격자 보기</S.Title>
           <S.About>최종 합격자를 조회합니다.</S.About>

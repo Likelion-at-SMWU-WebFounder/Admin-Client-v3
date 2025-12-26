@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import apiModule from "../../api/apiModule";
 import { useNavigate } from "react-router-dom";
 import * as L from "../../style/LayoutStyle";
-import * as S from "./QuestionPage.style";
+import * as S from "./style/QuestionPage.style";
 import * as B from "../../components/button/Button.style";
-
 import Navbar from "../../components/common/Navbar";
 
 const QuestionPage = () => {

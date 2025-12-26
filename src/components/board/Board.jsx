@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as L from "../../style/LayoutStyle";
-import * as S from "./Board.style";
+import * as S from "./style/Board.style";
 import * as B from "../button/Button.style";
 import DocsList from "./DocsList";
 import BoardWithTime from "./BoardWithTime";

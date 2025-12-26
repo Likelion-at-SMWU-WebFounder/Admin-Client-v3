@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./Form.style";
+import * as S from "./style/Form.style";
 import * as L from "../../style/LayoutStyle";
 
 // TODO : img 잘 나오는지 확인

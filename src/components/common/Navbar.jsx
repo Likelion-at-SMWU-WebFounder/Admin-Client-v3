@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import * as S from "./Navbar.style";
+import * as S from "./style/Navbar.style";
 import Logo from "./Logo";
 
 const Navbar = () => {

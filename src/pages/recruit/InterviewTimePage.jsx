@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
 import apiModule from "../../api/apiModule";
-import styled from "styled-components";
 import * as S from "../../style/LayoutStyle";
 import Navbar from "../../components/common/Navbar";
 import Board from "../../components/board/Board";
 
-const VLine = styled.div`
-  border-left: 1px solid white;
-  min-height: 100vh;
-`;
 const InterviewTimePage = () => {
   const [docs, setDocs] = useState([]);
 
@@ -46,7 +41,6 @@ const InterviewTimePage = () => {
     <>
       <S.Layout>
         <Navbar />
-        <VLine></VLine>
         <S.Container>
           <S.Title>지원자별 면접 시간 관리</S.Title>
           <S.About>서류 합격자의 면접 시간을 조정하고, 확정합니다.</S.About>
