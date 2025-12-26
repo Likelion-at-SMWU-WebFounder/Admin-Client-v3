@@ -26,6 +26,7 @@ export const Container = styled.div`
   margin-right: 30px;
   width: 100vw;
   margin-top: 30px;
+  margin-bottom: 30px;
   height: 100%;
 `;
 

@@ -31,6 +31,7 @@ export const Button = styled.button`
   background: ${({ color }) => color};
   color: ${({ fontColor }) => fontColor};
   width: fit-content;
+  max-height: 30px;
 `;
 
 export const ButtonText = styled.span`
