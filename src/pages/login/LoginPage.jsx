@@ -75,6 +75,9 @@ const LoginPage = () => {
             autoComplete="off"
           ></S.StyledInput>
         </S.InputWrapper>
+        <S.WarnText style={{ color: "white" }}>
+          원활한 이용을 위해 노트북·데스크톱 환경을 권장합니다.
+        </S.WarnText>
         <S.LoginButton type="submit">로그인</S.LoginButton>
       </S.Form>
     </S.LoginLayout>

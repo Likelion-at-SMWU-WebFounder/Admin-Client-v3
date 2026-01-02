@@ -60,7 +60,7 @@ export const StyledInput = styled.input`
 `;
 
 export const LoginButton = styled.button`
-  margin-top: 70px;
+  margin-top: 30px;
   width: 120px;
   height: 45px;
   flex-shrink: 0;
@@ -74,4 +74,11 @@ export const LoginButton = styled.button`
   font-weight: 700;
   line-height: normal;
   letter-spacing: -1.263px;
+`;
+
+export const WarnText = styled.div`
+  color: white;
+  font-size: 14px;
+  letter-spacing: -0.7px;
+  margin-top: 40px;
 `;
