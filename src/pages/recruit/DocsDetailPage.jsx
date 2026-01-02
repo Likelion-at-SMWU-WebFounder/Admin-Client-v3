@@ -33,6 +33,8 @@ const DocsDetailPage = () => {
       </S.LogoContainer>
       <L.Container>
         <Form documentData={documentData} />
+      </L.Container>
+      <L.Container>
         <Question documentData={documentData} />
       </L.Container>
     </S.Layout>
