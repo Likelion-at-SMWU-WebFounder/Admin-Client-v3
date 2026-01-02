@@ -17,37 +17,37 @@ export const PopupContent = styled.div`
   color: black;
   background-color: white;
   border-radius: 10px;
-  width: 1000px;
-  height: 750px;
+  width: 800px;
+  height: 650px;
   padding: 50px;
 `;
 
 export const HopeTimeContainer = styled.div`
   position: absolute;
-  top: 127px;
   font-size: 30px;
-  margin-top: 0px;
+  margin-top: 10px;
 `;
 
 export const Bold = styled.span`
   font-weight: bolder;
+  font-size: 23px;
 `;
 
 export const Select = styled.select`
-  padding: 10px;
-  margin-right: 30px;
+  padding: 7px;
+  margin-right: 20px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  width: 200px;
+  width: 170px;
 `;
 
 export const CancelButton = styled.button`
-  padding: 10px 20px;
+  margin: 10px 25px;
   position: absolute;
   right: 16px;
-  top: 30px;
-  font-size: 55px;
+  top: 33px;
+  font-size: 35px;
   border-radius: 5px;
   border: none;
   background: none;
