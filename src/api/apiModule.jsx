@@ -126,19 +126,6 @@ const apiModule = {
     }
   },
 
-  deleteInterview: async (checkedItems) => {
-    const url = "/api/manage/interview/del";
-    const data = { joinerIds: checkedItems };
-
-    try {
-      await axiosInstance.delete(url, { data });
-      return true;
-    } catch (err) {
-      console.error(err);
-      throw new Error(err);
-    }
-  },
-
   fetchQuestions: async () => {
     const url = "/api/manage/docs/quest";
     const year = "2025";
