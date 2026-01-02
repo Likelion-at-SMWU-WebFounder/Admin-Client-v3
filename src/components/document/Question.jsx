@@ -46,30 +46,29 @@ const Question = ({ documentData }) => {
 
   return (
     <>
-      <>
-        {questions[0]?.map((question, index) => (
-          <S.QuestionContainer key={index}>
-            <S.Text fontSize="18px">
-              {`${index + 1}: `}
-              &nbsp;
-              {question.content}
-              <S.QuestionLength>
-                {documentData && documentData.answerList
-                  ? documentData.answerList[index].length
-                  : ""}
-                자
-              </S.QuestionLength>
-            </S.Text>
-            <S.Textarea>
+      {questions[0]?.map((question, index) => (
+        <S.QuestionContainer key={index}>
+          <S.Text fontSize="15px">
+            {`${index + 1}) `}
+            &nbsp;
+            {question.content}
+            <S.QuestionLength>
+              &nbsp;(
               {documentData && documentData.answerList
-                ? documentData.answerList[index]
+                ? documentData.answerList[index].length
                 : ""}
-            </S.Textarea>
-          </S.QuestionContainer>
-        ))}
+              자)
+            </S.QuestionLength>
+          </S.Text>
+          <S.Textarea>
+            {documentData && documentData.answerList
+              ? documentData.answerList[index]
+              : ""}
+          </S.Textarea>
+        </S.QuestionContainer>
+      ))}
 
-        {/* <Hr marginTop="30px" />
-
+      {/* <Hr marginTop="30px" />
         {trackQuestions?.map((question, index) => (
           <QuestionContainer key={index}>
             <Text fontSize="18px" marginTop="30px" marginLeft="30px">
@@ -84,20 +83,6 @@ const Question = ({ documentData }) => {
           </QuestionContainer>
         ))}
         */}
-      </>
-
-      <S.QuestionContainer>
-        <S.Text fontSize="18px" marginTop="15px">
-          면접 가능 시간
-        </S.Text>
-        {documentData &&
-          documentData.interviewTime &&
-          documentData.interviewTime.map((item, i) => (
-            <S.Text key={i} fontSize="14px" marginTop="5px">
-              - {item}
-            </S.Text>
-          ))}
-      </S.QuestionContainer>
     </>
   );
 };

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Text = styled.div`
-  width: 1000px;
   font-size: ${(props) => props.fontSize};
   font-weight: 700;
   line-height: 25px;
@@ -11,16 +10,21 @@ export const Text = styled.div`
   margin-right: ${(props) => props.marginRight};
 `;
 
+export const ListText = styled.div`
+  font-size: 15px;
+  line-height: 20px;
+`;
+
 export const QuestionContainer = styled.div`
   margin-bottom: 20px;
+  width: auto;
 `;
 
 export const Textarea = styled.div`
   font-size: 14px;
-  padding: 10px;
+  padding: 5px 10px;
   border: 1px solid grey;
-  border-radius: 10px;
-  width: 1000px;
+  border-radius: 8px;
   min-height: 100px;
   height: fit-content;
   resize: vertical;
@@ -28,7 +32,7 @@ export const Textarea = styled.div`
   margin-top: 5px;
 `;
 
-export const QuestionLength = styled.div`
+export const QuestionLength = styled.span`
   margin-top: 5px;
   color: #eb9537;
 `;

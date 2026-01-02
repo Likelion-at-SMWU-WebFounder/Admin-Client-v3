@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import * as S from "./style/DocsDetailPage.style";
-import * as L from "../../style/LayoutStyle";
 import apiModule from "../../api/apiModule";
 import Form from "../../components/document/Form";
 import Question from "../../components/document/Question";
+import InterviewTime from "../../components/document/InterviewTime";
 
 const DocsDetailPage = () => {
   const { joinerId } = useParams();
@@ -31,12 +31,17 @@ const DocsDetailPage = () => {
           alt="Logo"
         />
       </S.LogoContainer>
-      <L.Container>
-        <Form documentData={documentData} />
-      </L.Container>
-      <L.Container>
-        <Question documentData={documentData} />
-      </L.Container>
+      <S.Container>
+        <S.ContetnContainer width="300px">
+          <Form documentData={documentData} />
+          <InterviewTime documentData={documentData} />
+        </S.ContetnContainer>
+        <S.Divider />
+
+        <S.ContetnContainer>
+          <Question documentData={documentData} />
+        </S.ContetnContainer>
+      </S.Container>
     </S.Layout>
   );
 };

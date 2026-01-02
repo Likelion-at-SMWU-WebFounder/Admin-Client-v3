@@ -18,12 +18,15 @@ export const Imgg = styled.img`
 
 export const ProgrammersFormContainer = styled.div`
   display: flex;
+  padding: 6px 0px;
 `;
 
 export const FormContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 6px 0px;
+  border-bottom: solid 1px #adadad;
 `;
 
 export const Row = styled.div`
@@ -31,7 +34,7 @@ export const Row = styled.div`
 `;
 
 export const Text = styled.div`
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   margin-top: ${(props) => props.marginTop};
   margin-bottom: ${(props) => props.marginBottom};
@@ -40,6 +43,6 @@ export const Text = styled.div`
 `;
 
 export const Div = styled.div`
-  font-size: 17px;
-  margin-left: 20px;
+  font-size: 15px;
+  margin-left: 15px;
 `;
