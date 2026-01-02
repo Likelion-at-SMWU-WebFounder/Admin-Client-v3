@@ -6,9 +6,13 @@ export const Layout = styled.div`
 `;
 
 export const Container = styled.div`
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+`;
+
+export const ContetnContainer = styled.div`
+  min-width: ${({ width }) => width};
 `;
 
 export const LogoContainer = styled.div`
@@ -21,4 +25,10 @@ export const LogoContainer = styled.div`
     width: 150px;
   }
   background-color: black;
+`;
+
+export const Divider = styled.div`
+  width: 2px;
+  background-color: #c1c1c1;
+  margin-right: 20px;
 `;

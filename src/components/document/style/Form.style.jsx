@@ -31,7 +31,7 @@ export const Row = styled.div`
 `;
 
 export const Text = styled.div`
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   margin-top: ${(props) => props.marginTop};
   margin-bottom: ${(props) => props.marginBottom};
@@ -40,6 +40,6 @@ export const Text = styled.div`
 `;
 
 export const Div = styled.div`
-  font-size: 17px;
+  font-size: 15px;
   margin-left: 20px;
 `;
