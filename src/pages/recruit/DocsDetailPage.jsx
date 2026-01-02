@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import * as S from "./style/DocsDetailPage.style";
-import * as L from "../../style/LayoutStyle";
 import apiModule from "../../api/apiModule";
 import Form from "../../components/document/Form";
 import Question from "../../components/document/Question";
