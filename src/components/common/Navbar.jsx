@@ -42,7 +42,7 @@ const Navbar = () => {
                     isActive ? "active" : undefined
                   }
                 >
-                  지원자별 면접 시간 관리
+                  면접 대상자 관리
                 </S.NavStyleLink>
               </S.NavItem>
 
