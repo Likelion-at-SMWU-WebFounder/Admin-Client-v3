@@ -8,7 +8,7 @@ export const QuestionContainer = styled.div`
 
 export const QuestionDiv = styled.div`
   padding: 10px 10px;
-  min-width: 800px;
+  width: 800px;
   height: fit-content;
   min-height: 100px;
   margin-bottom: 3px;
