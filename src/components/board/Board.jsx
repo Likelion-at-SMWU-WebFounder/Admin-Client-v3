@@ -77,12 +77,10 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
     if (checkedItems.length === 0) {
       alert("선택된 지원자가 없습니다.");
     } else {
-      if (
-        window.confirm("선택한 지원자를 합격자 테이블에서 삭제하시겠습니까?")
-      ) {
+      if (window.confirm("선택한 지원자를 휴지통으로 이동하시겠습니까?")) {
         onDelete(checkedItems);
         setCheckedItems([]);
-        alert("선택한 지원자가 합격자 테이블에서 삭제되었습니다.");
+        alert("선택한 지원자를 휴지통으로 이동하였습니다.");
       }
     }
   };
@@ -97,7 +95,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
         onAdd(checkedItems);
         setCheckedItems([]);
         alert(
-          "선택한 지원자가 서류 합격자 테이블에 추가되었습니다. \n합격자 테이블은 [신규모집관리 - 서류 합격자 선정] 탭에서 확인 가능합니다. "
+          "선택한 지원자가 서류 합격자 테이블에 추가되었습니다. \n합격자 테이블은 [서류 합격자 보기] 탭에서 확인 가능합니다. "
         );
       }
     }
@@ -113,7 +111,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
         onAdd(checkedItems);
         setCheckedItems([]);
         alert(
-          "선택한 지원자가 최종 합격자 테이블에 추가되었습니다. \n합격자 테이블은 [신규모집관리 - 최종 합격자 선정] 탭에서 확인 가능합니다. "
+          "선택한 지원자가 최종 합격자 테이블에 추가되었습니다. \n합격자 테이블은 [최종 합격자 보기] 탭에서 확인 가능합니다. "
         );
       }
     }
@@ -204,7 +202,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
         <B.ButtonContainer>
           <B.ButtonSet>
             <B.Button color="#e08888" onClick={handleRestoreButtonClick}>
-              복구
+              <B.ButtonText>복구</B.ButtonText>
             </B.Button>
           </B.ButtonSet>
         </B.ButtonContainer>

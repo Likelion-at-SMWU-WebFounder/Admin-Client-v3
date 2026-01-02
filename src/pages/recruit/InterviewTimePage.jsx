@@ -42,8 +42,10 @@ const InterviewTimePage = () => {
       <S.Layout>
         <Navbar />
         <S.Container>
-          <S.Title>지원자별 면접 시간 관리</S.Title>
-          <S.About>서류 합격자의 면접 시간을 조정하고, 확정합니다.</S.About>
+          <S.Title>면접 대상자 관리</S.Title>
+          <S.About>
+            면접 대상자의 면접 시간을 조정하고, 최종 합격을 확정합니다.
+          </S.About>
           <S.SubTitle>서류 합격자 테이블</S.SubTitle>
           <Board
             pass={docs}
