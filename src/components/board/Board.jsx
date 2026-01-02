@@ -204,7 +204,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
         <B.ButtonContainer>
           <B.ButtonSet>
             <B.Button color="#e08888" onClick={handleRestoreButtonClick}>
-              복구
+              <B.ButtonText>복구</B.ButtonText>
             </B.Button>
           </B.ButtonSet>
         </B.ButtonContainer>
