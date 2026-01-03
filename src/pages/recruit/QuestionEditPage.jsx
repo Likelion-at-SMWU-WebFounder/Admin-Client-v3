@@ -5,6 +5,7 @@ import * as B from "../../components/button/Button.style";
 import * as S from "./style/QuestionPage.style";
 import Navbar from "../../components/common/Navbar";
 import apiModule from "../../api/apiModule";
+import QuestionsList from "../../components/board/QuestionsList";
 
 const QuestionEditPage = () => {
   const [questions, setQuestions] = useState([]);
@@ -54,66 +55,66 @@ const QuestionEditPage = () => {
         <L.Container>
           <L.Title>서류 문항 수정</L.Title>
           <L.About>지원 서류 문항을 수정합니다.</L.About>
-          <L.RowDiv>
-            <L.Title>공통 문항</L.Title>
-          </L.RowDiv>
+
           <>
-            {questions[0]?.map((question, index) => (
-              <S.QuestionContainer>
-                <S.QuestionInput
-                  key={index}
-                  placeholder="문항 질문을 작성해주세요 ..."
-                  value={question.content}
-                  onChange={(event) => handleQuestionChange(0, index, event)}
-                />{" "}
-              </S.QuestionContainer>
-            ))}
+            <S.TrackTitle>공통 문항</S.TrackTitle>
+            <S.QuestionContainer>
+              {questions[0]?.map((question, index) => (
+                <S.QuestionInputContainer key={index}>
+                  <S.QuestionInput
+                    placeholder="문항 질문을 작성해주세요 ..."
+                    value={question.content}
+                    onChange={(event) => handleQuestionChange(0, index, event)}
+                  />
+                </S.QuestionInputContainer>
+              ))}
+            </S.QuestionContainer>
           </>
 
-          <S.Div></S.Div>
-          <L.RowDiv>
-            <L.Title>기획 · 디자인 트랙 문항</L.Title>
-          </L.RowDiv>
-          <S.QuestionContainer>
-            {questions[1]?.map((question, index) => (
-              <S.QuestionInput
-                key={index}
-                placeholder="문항 질문을 작성해주세요 ..."
-                value={question.content}
-                onChange={(event) => handleQuestionChange(1, index, event)}
-              />
-            ))}
-          </S.QuestionContainer>
+          <>
+            <S.TrackTitle>기획·디자인 트랙 문항</S.TrackTitle>
+            <S.QuestionContainer>
+              {questions[1]?.map((question, index) => (
+                <S.QuestionInputContainer key={index}>
+                  <S.QuestionInput
+                    placeholder="문항 질문을 작성해주세요 ..."
+                    value={question.content}
+                    onChange={(event) => handleQuestionChange(1, index, event)}
+                  />
+                </S.QuestionInputContainer>
+              ))}
+            </S.QuestionContainer>
+          </>
 
-          <S.Div></S.Div>
-          <L.RowDiv>
-            <L.Title>프론트엔드 트랙 문항</L.Title>
-          </L.RowDiv>
-          <S.QuestionContainer>
-            {questions[2]?.map((question, index) => (
-              <S.QuestionInput
-                key={index}
-                placeholder="문항 질문을 작성해주세요 ..."
-                value={question.content}
-                onChange={(event) => handleQuestionChange(2, index, event)}
-              />
-            ))}
-          </S.QuestionContainer>
+          <>
+            <S.TrackTitle>프론트엔드 트랙 문항</S.TrackTitle>
+            <S.QuestionContainer>
+              {questions[2]?.map((question, index) => (
+                <S.QuestionInputContainer key={index}>
+                  <S.QuestionInput
+                    placeholder="문항 질문을 작성해주세요 ..."
+                    value={question.content}
+                    onChange={(event) => handleQuestionChange(2, index, event)}
+                  />
+                </S.QuestionInputContainer>
+              ))}
+            </S.QuestionContainer>
+          </>
 
-          <S.Div></S.Div>
-          <L.RowDiv>
-            <L.Title>백엔드 트랙 문항</L.Title>
-          </L.RowDiv>
-          <S.QuestionContainer>
-            {questions[3]?.map((question, index) => (
-              <S.QuestionInput
-                key={index}
-                placeholder="문항 질문을 작성해주세요 ..."
-                value={question.content}
-                onChange={(event) => handleQuestionChange(3, index, event)}
-              />
-            ))}
-          </S.QuestionContainer>
+          <>
+            <S.TrackTitle>백엔드 트랙 문항</S.TrackTitle>
+            <S.QuestionContainer>
+              {questions[3]?.map((question, index) => (
+                <S.QuestionInputContainer key={index}>
+                  <S.QuestionInput
+                    placeholder="문항 질문을 작성해주세요 ..."
+                    value={question.content}
+                    onChange={(event) => handleQuestionChange(3, index, event)}
+                  />
+                </S.QuestionInputContainer>
+              ))}
+            </S.QuestionContainer>
+          </>
 
           <S.Div></S.Div>
           <S.Div></S.Div>
@@ -127,7 +128,7 @@ const QuestionEditPage = () => {
                   editQuestions(questions.flat());
                 }}
               >
-                <B.ButtonText>저장</B.ButtonText>
+                <B.ButtonText>변경 사항 저장</B.ButtonText>
               </B.Button>
             </B.ButtonSet>
           </B.ButtonContainer>
