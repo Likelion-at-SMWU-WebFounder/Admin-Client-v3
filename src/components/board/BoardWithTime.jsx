@@ -84,6 +84,7 @@ const BoardWithTime = ({
                 />
               )}
               <B.Button
+                color="#d9d9d9"
                 onClick={() => {
                   setShowPopup(true);
                   setSelectedItemId(data.joinerId);
