@@ -128,7 +128,7 @@ const apiModule = {
 
   fetchQuestions: async () => {
     const url = "/api/manage/docs/quest";
-    const year = "2025";
+    const year = "2026";
     const tracks = ["common", "pm", "fe", "be"];
 
     try {
