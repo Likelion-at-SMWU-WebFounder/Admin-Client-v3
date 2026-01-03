@@ -27,15 +27,17 @@ export const Button = styled.button`
   padding-right: 10px;
   padding-top: 3px;
   padding-bottom: 3px;
+  margin-bottom: 3px;
   text-align: center;
   background: ${({ color }) => color};
   color: ${({ fontColor }) => fontColor};
-  width: fit-content;
   max-height: 30px;
+  max-width: fit-content;
 `;
 
 export const ButtonText = styled.span`
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: -1.414px;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
 `;
