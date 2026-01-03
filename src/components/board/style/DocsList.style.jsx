@@ -78,7 +78,7 @@ export const Button = styled.button`
 `;
 
 export const ButtonText = styled.span`
-  font-size: 17px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
