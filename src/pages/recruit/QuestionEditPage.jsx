@@ -5,7 +5,6 @@ import * as B from "../../components/button/Button.style";
 import * as S from "./style/QuestionPage.style";
 import Navbar from "../../components/common/Navbar";
 import apiModule from "../../api/apiModule";
-import QuestionsList from "../../components/board/QuestionsList";
 
 const QuestionEditPage = () => {
   const [questions, setQuestions] = useState([]);
