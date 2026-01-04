@@ -68,10 +68,17 @@ const Form = ({ documentData }) => {
           <S.Text>프로그래머스 수강 인증</S.Text>
           {documentData &&
             (documentData.studentInfo.programmers === "ENROLLED" ? (
-              <S.Imgg
-                src={documentData.studentInfo.programmersImg}
-                alt="프로그래머스 수강 인증"
-              />
+              // <S.Imgg
+              //   src={documentData.studentInfo.programmersImg}
+              //   alt="프로그래머스 수강 인증"
+              // />
+              // DocsDetailPage.js
+              <S.DownloadButton 
+                href={documentData.studentInfo.programmersImg} 
+                download="프로그래머스_인증서류.zip" // 다운로드될 파일명 지정
+              >
+              인증서류 다운로드
+              </S.DownloadButton>
             ) : (
               <S.Div>해당 없음</S.Div>
             ))}

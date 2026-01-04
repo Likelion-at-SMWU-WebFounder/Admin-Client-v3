@@ -46,3 +46,19 @@ export const Div = styled.div`
   font-size: 15px;
   margin-left: 15px;
 `;
+
+export const DownloadButton = styled.a`
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* 원하는 색상으로 변경 */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
