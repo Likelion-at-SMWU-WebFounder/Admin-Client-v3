@@ -28,7 +28,7 @@ export const LogoContainer = styled.div`
 `;
 
 export const Divider = styled.div`
-  width: 2px;
+  width: 1px;
   background-color: #c1c1c1;
-  margin-right: 20px;
+  margin: 0px 10px;
 `;

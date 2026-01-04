@@ -24,66 +24,61 @@ const Form = ({ documentData }) => {
       </S.Row>
       <L.About>지원자의 서류 내용을 조회합니다.</L.About>
 
-      <>
-        <S.FormContainer>
+      <S.FormContainer>
+        <S.FormInfoContainer>
           <S.Text>성함</S.Text>
           <S.Div>{documentData && documentData.studentInfo.name}</S.Div>
-        </S.FormContainer>
-        <S.FormContainer>
+        </S.FormInfoContainer>
+        <S.FormInfoContainer>
           <S.Text>학번</S.Text>
           <S.Div>{documentData && documentData.studentInfo.studentId}</S.Div>
-        </S.FormContainer>
-        <S.FormContainer>
+        </S.FormInfoContainer>
+        <S.FormInfoContainer>
           <S.Text>전공</S.Text>
           <S.Div>{documentData && documentData.studentInfo.major}</S.Div>
-        </S.FormContainer>
-        <S.FormContainer>
+        </S.FormInfoContainer>
+        <S.FormInfoContainer>
           <S.Text>수료 학기</S.Text>
           <S.Div>{documentData && documentData.studentInfo.completedSem}</S.Div>
-        </S.FormContainer>
-        <S.FormContainer>
+        </S.FormInfoContainer>
+        <S.FormInfoContainer>
           <S.Text>재/휴학 여부</S.Text>
           <S.Div>{documentData && documentData.studentInfo.schoolStatus}</S.Div>
-        </S.FormContainer>
-        <S.FormContainer>
+        </S.FormInfoContainer>
+        <S.FormInfoContainer>
           <S.Text>졸업 예정 연도</S.Text>
           <S.Div>
             {documentData && documentData.studentInfo.graduatedYear}
           </S.Div>
-        </S.FormContainer>
-        <S.FormContainer>
+        </S.FormInfoContainer>
+        <S.FormInfoContainer>
           <S.Text>전화번호</S.Text>
           <S.Div>{documentData && documentData.studentInfo.phoneNumber}</S.Div>
-        </S.FormContainer>
-        <S.FormContainer>
+        </S.FormInfoContainer>
+        <S.FormInfoContainer>
           <S.Text>이메일</S.Text>
           <S.Div>{documentData && documentData.studentInfo.email}</S.Div>
-        </S.FormContainer>
+        </S.FormInfoContainer>
 
-        <S.FormContainer>
+        <S.FormInfoContainer>
           <S.Text>프로그래머스 수강 여부</S.Text>
           <S.Div>{documentData && documentData.studentInfo.programmers}</S.Div>
-        </S.FormContainer>
-        <S.ProgrammersFormContainer>
-          <S.Text>프로그래머스 수강 인증</S.Text>
+        </S.FormInfoContainer>
+        <S.ProgrammersFormInfoContainer>
+          <S.Text>프로그래머스 인증 서류</S.Text>
           {documentData &&
             (documentData.studentInfo.programmers === "ENROLLED" ? (
-              // <S.Imgg
-              //   src={documentData.studentInfo.programmersImg}
-              //   alt="프로그래머스 수강 인증"
-              // />
-              // DocsDetailPage.js
-              <S.DownloadButton 
-                href={documentData.studentInfo.programmersImg} 
+              <S.DownloadButton
+                href={documentData.studentInfo.programmersImg}
                 download="프로그래머스_인증서류.zip" // 다운로드될 파일명 지정
               >
-              인증서류 다운로드
+                다운로드
               </S.DownloadButton>
             ) : (
               <S.Div>해당 없음</S.Div>
             ))}
-        </S.ProgrammersFormContainer>
-      </>
+        </S.ProgrammersFormInfoContainer>
+      </S.FormContainer>
     </>
   );
 };
