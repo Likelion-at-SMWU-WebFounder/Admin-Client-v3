@@ -48,17 +48,21 @@ export const Div = styled.div`
 `;
 
 export const DownloadButton = styled.a`
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff; /* 원하는 색상으로 변경 */
+  display: inline-flex; /* 내부 텍스트 정렬에 유리 */
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px; /* 패딩을 살짝 줄여서 콤팩트하게 변경 */
+  background-color: #3b82f6; /* 조금 더 세련된 블루 톤 */
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px; /* 글자 크기 명시 */
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 10px;
+  white-space: nowrap; /* 텍스트가 절대 줄바꿈되지 않게 고정 */
+  transition: background-color 0.2s; /* 부드러운 호버 효과 */
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #2563eb;
   }
 `;
