@@ -10,11 +10,6 @@ export const Text = styled.div`
   margin-right: ${(props) => props.marginRight};
 `;
 
-export const ListText = styled.div`
-  font-size: 15px;
-  line-height: 20px;
-`;
-
 export const QuestionContainer = styled.div`
   margin-bottom: 20px;
   width: auto;
