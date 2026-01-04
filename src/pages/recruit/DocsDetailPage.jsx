@@ -15,6 +15,11 @@ const DocsDetailPage = () => {
       try {
         const data = await apiModule.fetchDocumentDetail(joinerId);
         setDocumentData(data);
+
+        const track = data.studentInfo.track?.toUpperCase();
+        const name = data.studentInfo.name?.toUpperCase();
+
+        document.title = `[${track}] ${name}`;
       } catch (error) {
         console.error(error);
       }
