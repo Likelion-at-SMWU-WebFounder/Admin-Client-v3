@@ -72,18 +72,19 @@ const BoardWithTime = ({
               <S.Cell>{data.name}</S.Cell>
               <S.Cell>{data.phoneNum}</S.Cell>
               <S.Cell>{data.studentID}</S.Cell>
-              <S.Cell>{data.track}</S.Cell>
+              <S.Cell>{data.track.toUpperCase()}</S.Cell>
               <S.Cell>{data.interviewTime ? data.interviewTime : "-"}</S.Cell>
 
               {showPopup && selectedItemId === data.joinerId && (
                 <TimePopup
-                  track={data.track}
+                  track={data.track.toUpperCase()}
                   aname={data.name}
                   joinerId={data.joinerId}
                   onClose={() => setShowPopup(false)}
                 />
               )}
               <B.Button
+                color="#d9d9d9"
                 onClick={() => {
                   setShowPopup(true);
                   setSelectedItemId(data.joinerId);

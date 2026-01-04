@@ -65,7 +65,7 @@ const DocsList = ({ list, checkedItems, setCheckedItems }) => {
               <S.Cell>{data.name}</S.Cell>
               <S.Cell>{data.phoneNum}</S.Cell>
               <S.Cell>{data.studentID}</S.Cell>
-              <S.Cell>{data.track}</S.Cell>
+              <S.Cell>{data.track.toUpperCase()}</S.Cell>
               <S.Cell>{data.submissionTime}</S.Cell>
               <S.Cell>
                 <S.Button onClick={() => openDetailDocument(data.joinerId)}>
