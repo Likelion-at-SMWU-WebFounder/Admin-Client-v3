@@ -20,9 +20,9 @@ const FinalPassPage = () => {
     fetchDocsResult();
   }, []);
 
-  const handleStashApply = async (checkedItems) => {
+  const handleDeleteApply = async (checkedItems) => {
     try {
-      await apiModule.stashApply(checkedItems);
+      await apiModule.deleteInterviewResult(checkedItems);
       await fetchDocsResult();
     } catch (error) {
       console.error("error:", error);
@@ -37,7 +37,7 @@ const FinalPassPage = () => {
           <S.Title>최종 합격자 보기</S.Title>
           <S.About>최종 합격자를 조회합니다.</S.About>
           <S.SubTitle>최종 합격자 테이블</S.SubTitle>
-          <Board pass={docs} type="type2" onDelete={handleStashApply} />
+          <Board pass={docs} type="type2-2" onDelete={handleDeleteApply} />
         </S.Container>
       </S.Layout>
     </>
