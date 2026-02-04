@@ -54,7 +54,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
 
   const tracks = [
     { value: "all", label: "전체트랙" },
-    { value: "pm", label: "기획 · 디자인" },
+    { value: "pm", label: "기획·디자인" },
     { value: "fe", label: "프론트엔드" },
     { value: "be", label: "백엔드" },
   ];
