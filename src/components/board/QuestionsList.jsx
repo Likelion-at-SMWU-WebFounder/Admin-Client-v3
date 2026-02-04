@@ -16,9 +16,9 @@ const QuestionsList = ({ questions, onDelete }) => {
             <S.Cell width="40px" align="center">
               {data.number}
             </S.Cell>
-            <S.Cell width="50vw">{data.content}</S.Cell>
+            <S.Cell>{data.content}</S.Cell>
 
-            <S.Cell>
+            <S.Cell width="40px">
               <B.Button color="#e08888" onClick={() => onDelete(data.id)}>
                 <B.ButtonText>삭제</B.ButtonText>
               </B.Button>

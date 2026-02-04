@@ -34,7 +34,7 @@ export const Cell = styled.div`
   display: table-cell;
   vertical-align: middle;
   font-size: 18px;
-  min-width: ${({ width }) => width};
+  width: ${({ width }) => width};
   text-align: ${({ align }) => align || "left"};
   padding: 3px 5px;
 `;

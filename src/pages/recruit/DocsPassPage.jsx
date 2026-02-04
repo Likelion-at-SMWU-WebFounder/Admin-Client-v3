@@ -20,9 +20,9 @@ const DocsPassPage = () => {
     fetchData();
   }, []);
 
-  const handleStashApply = async (checkedItems) => {
+  const handledeleteApply = async (checkedItems) => {
     try {
-      await apiModule.stashApply(checkedItems);
+      await apiModule.deleteDocsResult(checkedItems);
       await fetchData();
     } catch (error) {
       console.error("error:", error);
@@ -37,7 +37,7 @@ const DocsPassPage = () => {
           <S.Title>서류 합격자 보기</S.Title>
           <S.About>서류 합격 서류를 분류하여 별도로 관리합니다.</S.About>
           <S.SubTitle>서류 합격자 테이블</S.SubTitle>
-          <Board pass={docs} type="type2" onDelete={handleStashApply} />
+          <Board pass={docs} type="type2-1" onDelete={handledeleteApply} />
         </S.Container>
       </S.Layout>
     </>
