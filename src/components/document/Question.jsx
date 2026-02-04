@@ -5,6 +5,7 @@ import * as S from "./style/Question.style";
 const Question = ({ documentData }) => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
+  const answers = documentData?.answerList || [];
 
   useEffect(() => {
     const fetchDocuments = async () => {
@@ -46,27 +47,23 @@ const Question = ({ documentData }) => {
 
   return (
     <>
-      {questions[0]?.map((question, index) => (
-        <S.QuestionContainer key={index}>
-          <S.Text fontSize="15px">
-            {`${index + 1}) `}
-            &nbsp;
-            {question.content}
-            <S.QuestionLength>
-              &nbsp;(
-              {documentData && documentData.answerList
-                ? documentData.answerList[index].length
-                : ""}
-              자)
-            </S.QuestionLength>
-          </S.Text>
-          <S.Textarea>
-            {documentData && documentData.answerList
-              ? documentData.answerList[index]
-              : ""}
-          </S.Textarea>
-        </S.QuestionContainer>
-      ))}
+      {questions[0]?.map((question, index) => {
+        const answer = answers[index] ?? "";
+
+        return (
+          <S.QuestionContainer key={index}>
+            <S.Text fontSize="15px">
+              {`${index + 1}) `}
+              &nbsp;
+              {question.content}
+              <S.QuestionLength>
+                &nbsp;({answer.length}자)
+              </S.QuestionLength>
+            </S.Text>
+            <S.Textarea>{answer}</S.Textarea>
+          </S.QuestionContainer>
+        );
+      })}
 
       {/* <Hr marginTop="30px" />
         {trackQuestions?.map((question, index) => (
