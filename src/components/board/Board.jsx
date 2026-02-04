@@ -221,9 +221,9 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
             <B.Button color="#8fe088" onClick={handleAddButtonClick}>
               <B.ButtonText>최종 합격자로 추가 +</B.ButtonText>
             </B.Button>
-            <B.Button color="#e08888" onClick={handleDeleteButtonClick}>
+            {/* <B.Button color="#e08888" onClick={handleDeleteButtonClick}>
               <B.ButtonText> 서류 합격 취소</B.ButtonText>
-            </B.Button>
+            </B.Button> */}
           </B.ButtonSet>
         </B.ButtonContainer>
       )}
