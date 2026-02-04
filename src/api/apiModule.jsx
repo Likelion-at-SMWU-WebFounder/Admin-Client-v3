@@ -10,8 +10,8 @@ const apiModule = {
         tracks.map((track) =>
           axiosInstance.get(url, {
             params: { track: track, page: 0, size: 200 },
-          })
-        )
+          }),
+        ),
       );
       const data = responses.map((response) => response.data.result);
       return data;
@@ -43,8 +43,8 @@ const apiModule = {
         tracks.map((track) =>
           axiosInstance.get(url, {
             params: { track: track, page: 0, size: 200 },
-          })
-        )
+          }),
+        ),
       );
       const data = responses.map((response) => response.data.result);
       return data;
@@ -81,7 +81,7 @@ const apiModule = {
 
     try {
       const responses = await Promise.all(
-        tracks.map((track) => axiosInstance.get(url, { params: { track } }))
+        tracks.map((track) => axiosInstance.get(url, { params: { track } })),
       );
       const data = responses.map((response) => response.data.result);
       return data;
@@ -107,7 +107,7 @@ const apiModule = {
 
     try {
       const responses = await Promise.all(
-        tracks.map((track) => axiosInstance.get(url, { params: { track } }))
+        tracks.map((track) => axiosInstance.get(url, { params: { track } })),
       );
       const data = responses.map((response) => response.data.result);
       return data;
@@ -126,6 +126,17 @@ const apiModule = {
     }
   },
 
+  deleteInterviewResult: async (joinerIds) => {
+    const url = "/api/manage/interview/del";
+
+    try {
+      const response = await axiosInstance.delete(url, { data: { joinerIds } });
+      return response.data;
+    } catch (err) {
+      throw new Error(err);
+    }
+  },
+
   fetchQuestions: async () => {
     const url = "/api/manage/docs/quest";
     const year = "2026";
@@ -134,8 +145,8 @@ const apiModule = {
     try {
       const responses = await Promise.all(
         tracks.map((track) =>
-          axiosInstance.get(url, { params: { year, track } })
-        )
+          axiosInstance.get(url, { params: { year, track } }),
+        ),
       );
       const data = responses.map((response) => response.data.result);
       return data;
