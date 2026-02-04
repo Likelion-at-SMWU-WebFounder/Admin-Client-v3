@@ -46,7 +46,7 @@ const InterviewTimePage = () => {
           <S.About>
             면접 대상자의 면접 시간을 조정하고, 최종 합격을 확정합니다.
           </S.About>
-          <S.SubTitle>서류 합격자 테이블</S.SubTitle>
+          <S.SubTitle>면접 대상자 테이블</S.SubTitle>
           <Board
             pass={docs}
             type="type3"
