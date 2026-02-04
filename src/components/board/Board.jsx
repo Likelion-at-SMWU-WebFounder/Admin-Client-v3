@@ -54,7 +54,7 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
 
   const tracks = [
     { value: "all", label: "전체트랙" },
-    { value: "pm", label: "기획 · 디자인" },
+    { value: "pm", label: "기획·디자인" },
     { value: "fe", label: "프론트엔드" },
     { value: "be", label: "백엔드" },
   ];
@@ -221,9 +221,9 @@ const Board = ({ pass, type, onAdd, onDelete }) => {
             <B.Button color="#8fe088" onClick={handleAddButtonClick}>
               <B.ButtonText>최종 합격자로 추가 +</B.ButtonText>
             </B.Button>
-            <B.Button color="#e08888" onClick={handleDeleteButtonClick}>
+            {/* <B.Button color="#e08888" onClick={handleDeleteButtonClick}>
               <B.ButtonText> 서류 합격 취소</B.ButtonText>
-            </B.Button>
+            </B.Button> */}
           </B.ButtonSet>
         </B.ButtonContainer>
       )}

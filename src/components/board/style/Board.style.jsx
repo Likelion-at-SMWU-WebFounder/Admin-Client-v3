@@ -22,6 +22,7 @@ export const customStyles = {
     borderColor: "white",
     borderRadius: "10px",
     boxShadow: "none",
+    cursor: "pointer",
     "&:hover": {
       borderColor: "white",
     },
@@ -33,6 +34,8 @@ export const customStyles = {
     fontWeight: state.isSelected ? "bold" : "normal",
     color: "black",
     backgroundColor: "white",
+    whiteSpace: "nowrap",
+    cursor: "pointer",
     "&:hover": {
       backgroundColor: "#d2d2d2",
     },
